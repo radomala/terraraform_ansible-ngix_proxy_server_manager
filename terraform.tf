@@ -22,7 +22,7 @@ resource "aws_instance" "myserver" {
 
     connection {
       type        = "ssh"                        # Type of connection used to communicate with the instance.
-      user        = "ec2-user"                   # Username for SSH access to the instance (default for Amazon Linux).
+      user        = "ubuntu"                   # Username for SSH access to the instance (default for Amazon Linux).
       private_key = file("/home/rado/Desktop/PROJET-SAINT-AUGUSTIN/paire_cle_aws.pem") # Path to the private key file for SSH authentication.
       host        = self.public_ip               # Public IP address of the instance for SSH connection.
     }
